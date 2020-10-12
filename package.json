@@ -1,24 +1,31 @@
 {
-   "name": "github-readme-perks",
-   "version": "0.0.1",
-   "description": "Perks to add to your Github Readme",
-   "author": "Pedro Queiroz",
-   "license": "MIT",
-   "private": true,
-   "scripts": {
-     "dev": "next dev",
-     "build": "next build",
-     "start": "next start"
-   },
-   "dependencies": {
-     "next": "9.5.5",
-     "react": "16.13.1",
-     "react-dom": "16.13.1"
-   },
-   "devDependencies": {
-     "@types/node": "^14.11.8",
-     "@types/react": "^16.9.52",
-     "typescript": "^4.0.3"
-   }
- }
- 
+  "name": "github-readme-perks",
+  "version": "0.0.1",
+  "description": "Perks to add to your Github Readme",
+  "author": "Pedro Queiroz",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "9.5.5",
+    "react": "16.13.1",
+    "react-dom": "16.13.1"
+  },
+  "devDependencies": {
+    "@types/node": "^14.11.8",
+    "@types/react": "^16.9.52",
+    "@typescript-eslint/eslint-plugin": "^4.4.0",
+    "@typescript-eslint/parser": "^4.4.0",
+    "eslint": "6.8.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-plugin-import": "2.20.1",
+    "eslint-plugin-jsx-a11y": "6.2.3",
+    "eslint-plugin-react": "7.19.0",
+    "eslint-plugin-react-hooks": "2.5.0",
+    "typescript": "^4.0.3"
+  }
+}
