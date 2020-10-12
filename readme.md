@@ -1,8 +1,8 @@
-## Features
+# Features
 
 - [Button](#button)
 
-# Button
+## Button
 
 Copy-paste this into your markdown content, and that's it. Simple!
 
