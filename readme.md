@@ -9,10 +9,6 @@ Copy-paste this into your markdown content, and that's it. Simple!
 Change the `?content=` value to your button display name.
 Change the `&link=` value to the button link.
 
-   bgColor?: string;
-   txtColor?: string;
-   icon?: string;
-
 > **Options:**<br>
  `&bgColor` (hex: string)<br>
  `&txtColor` (hex: string)<br>
