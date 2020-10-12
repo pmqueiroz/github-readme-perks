@@ -5,7 +5,7 @@ interface Data {
    icon?: string;
 }
 
-export default function getButtonTemplate(content: string, bgColor: string) {
+export default function getButtonTemplate(props: Data) {
   return `
    <svg
    width="200"
@@ -32,7 +32,7 @@ export default function getButtonTemplate(content: string, bgColor: string) {
          rx="6"
          height="100%"
          width="100%"
-         fill=${bgColor}
+         fill="${props.bgColor}"
          stroke-opacity="1"
       />
 
@@ -60,7 +60,7 @@ export default function getButtonTemplate(content: string, bgColor: string) {
             y="0"
             class="header"
             data-testid="header"
-            >${content}</text>
+            >${props.content}</text>
          </g>
       </g>
    </svg>

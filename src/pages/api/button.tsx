@@ -9,22 +9,21 @@ export default (request: NextApiRequest, response: NextApiResponse) => {
     const icon = String(request.query.icon);
 
     if (bgColor) {
-      bgColor = '"#bdb2ff"';
+      bgColor = '#bdb2ff';
     }
 
-    if (!content) {
-      throw new Error('Content is required');
-    }
+    const props = {
+      content,
+      bgColor,
+      txtColor,
+      icon,
+    };
 
-    const svg = getButtonTemplate(content, bgColor);
+    const svg = getButtonTemplate(props);
 
     response.setHeader('Content-Type', 'image/svg+xml');
     return response.end(svg);
   } catch (error) {
-    if (error.message === 'Content is required') {
-      return response.status(400).send(error.message);
-    }
-
     console.error(error);
     return response.status(500).send('Internal server error');
   }
