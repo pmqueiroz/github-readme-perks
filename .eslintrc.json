@@ -26,6 +26,8 @@
         "react-hooks"
     ],
     "rules": {
+      "@typescript-eslint/explicit-module-boundary-types": "off",
+      "no-console": "off",
       "react/react-in-jsx-scope": "off",
       "linebreak-style": ["error", "windows"],
       "react-hooks/rules-of-hooks": "error",
