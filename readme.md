@@ -12,7 +12,7 @@ Change the `&link=` value to the button link.
 > **Options:**<br>
  `&bgColor` (hex: string)<br>
  `&txtColor` (hex: string)<br>
- `&icon` ([iconName](): string || image: data)<br>
+ `&logo` ([logoName](): string || image: data)<br>
 
 
 ```md
