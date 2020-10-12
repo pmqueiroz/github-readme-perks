@@ -1,3 +1,16 @@
+<div align="center">
+
+<img width="250px" align="center" src="https://raw.githubusercontent.com/pmqueiroz/github-readme-perks/7849562f120db8b5fe999fc7c9044e0d5440c192/src/assets/logo.svg"></img>
+
+<p align="center">
+    We serve fast and scalable informational perks as svg images for GitHub README.md
+</p>
+
+
+</div>
+
+
+
 # Features
 
 - [Button](#button)
