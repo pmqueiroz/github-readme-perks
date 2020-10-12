@@ -11,15 +11,23 @@ export default (request: NextApiRequest, response: NextApiResponse) => {
     const content = String(request.query.content);
     const link = String(request.query.link);
     let bgColor = String(request.query.bgColor);
-    const txtColor = String(request.query.txtColor);
+    let txtColor = String(request.query.txtColor);
     const logo = String(request.query.logo);
 
     if (!request.query.bgColor) {
       bgColor = '#bdb2ff';
     }
 
+    if (!request.query.txtColor) {
+      txtColor = '#fff';
+    }
+
     if (!/^#[0-9A-F]{6}$/i.test(bgColor)) {
-      bgColor = '#c53030';
+      bgColor = '#bdb2ff';
+    }
+
+    if (!/^#[0-9A-F]{6}$/i.test(txtColor)) {
+      txtColor = '#fff';
     }
 
     const icon = getDefaultLogos(logo);

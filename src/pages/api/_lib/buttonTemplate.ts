@@ -1,9 +1,9 @@
 interface Data {
    content: string;
    link: string;
-   bgColor?: string;
-   txtColor?: string;
-   icon?: string;
+   bgColor: string;
+   txtColor: string;
+   icon: string;
 }
 
 export default function getButtonTemplate(props: Data) {
@@ -19,10 +19,9 @@ export default function getButtonTemplate(props: Data) {
       <style>
          .header {
             font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
-            fill: #fff;
+            fill: ${props.txtColor};
             animation: fadeInAnimation 0.8s ease-in-out forwards;
          }
-         .icon { fill: #fff }
       </style>
 
       undefined
@@ -49,7 +48,7 @@ export default function getButtonTemplate(props: Data) {
                y="-13"
                width="16"
                height="16"
-               fill="#fff"
+               fill="${props.txtColor}"
                href="data:image/svg+xml;base64,${(props.icon)}"
                />
             </g>
