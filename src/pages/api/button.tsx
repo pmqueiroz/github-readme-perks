@@ -5,7 +5,7 @@ import getDefaultLogos from './_lib/getDefaultLogos';
 export default (request: NextApiRequest, response: NextApiResponse) => {
   try {
     if (!request.query.content) {
-      throw new Error('Content and Link is required');
+      throw new Error('Content is required');
     }
 
     const content = String(request.query.content);
@@ -46,8 +46,8 @@ export default (request: NextApiRequest, response: NextApiResponse) => {
     response.setHeader('Content-Type', 'image/svg+xml');
     return response.end(svg);
   } catch (error) {
-    if (error.message === 'Content and Link is required') {
-      return response.send('Content and Link is required');
+    if (error.message === 'Content is required') {
+      return response.send('Content is required `https://github-readme-perks.vercel.app/api/button?content=Example`');
     }
     return response.status(500).json({ error: 'Internal server error' });
   }
