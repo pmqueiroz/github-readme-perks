@@ -1,5 +1,6 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import getButtonTemplate from './_lib/buttonTemplate';
+import getDefaultLogos from './_lib/getDefaultLogos';
 
 export default (request: NextApiRequest, response: NextApiResponse) => {
   try {
@@ -11,16 +12,23 @@ export default (request: NextApiRequest, response: NextApiResponse) => {
     const link = String(request.query.link);
     let bgColor = String(request.query.bgColor);
     const txtColor = String(request.query.txtColor);
-    const icon = String(request.query.icon);
+    const logo = String(request.query.logo);
 
     if (!request.query.bgColor) {
       bgColor = '#bdb2ff';
     }
 
+    if (!/^#[0-9A-F]{6}$/i.test(bgColor)) {
+      bgColor = '#c53030';
+    }
+
+    const icon = getDefaultLogos(logo);
+
     const props = {
       content,
       bgColor,
       txtColor,
+      logo,
       icon,
       link,
     };
