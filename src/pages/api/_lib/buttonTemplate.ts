@@ -8,9 +8,9 @@ interface Data {
 export default function getButtonTemplate(props: Data) {
   return `
    <svg
-   width="200"
+   width="${(props.content.length * 10) + 50}"
    height="40"
-   viewBox="0 0 200 40"
+   viewBox="0 0 ${(props.content.length * 10) + 50} 40"
    fill="none"
    xmlns="http://www.w3.org/2000/svg"
    >
@@ -39,7 +39,7 @@ export default function getButtonTemplate(props: Data) {
 
       <g
          data-testid="card-title"
-         transform="translate(25, 26)"
+         transform="translate(15, 26)"
       >
          <g transform="translate(0, 0)">
             <svg
